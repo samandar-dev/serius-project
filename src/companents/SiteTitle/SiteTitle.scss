@@ -1,0 +1,29 @@
+.siteTitle {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(0, -50%) rotate(90deg);
+
+  &__span {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 87px;
+    color: transparent;
+    white-space: nowrap;
+    font-family: "Gilroy";
+    letter-spacing: 0.05em;
+    -webkit-text-stroke: 1px rgba(0, 0, 0, 0.2);
+  }
+}
+@media screen and (max-width: 550px) {
+  .siteTitle {
+    &__span {
+      font-size: 50px;
+      line-height: 60px;
+    }
+  }
+}

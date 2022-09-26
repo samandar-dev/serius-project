@@ -1,0 +1,84 @@
+@import "./assets/font/Gilroy/gilroy.scss";
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gilroy";
+}
+body {
+  display: flex;
+  min-height: 100vh;
+  overflow-x: hidden;
+  flex-direction: column;
+  background: #e5e5e5;
+}
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+#root {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.serius {
+  position: relative;
+  width: 100%;
+  max-width: 1366px;
+  margin: 0 auto;
+  height: 768px;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  background: rgb(247, 247, 247);
+  box-shadow: 0 0 25px 1px rgba(100, 100, 100, 0.2);
+}
+.app {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-image: url("./assets/images/bg-color.svg");
+}
+.container {
+  width: 100%;
+  max-width: 1245px;
+  margin: 0 auto;
+  padding: 0 25px;
+}
+.btn {
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  padding: 10px 36px;
+  border-radius: 50px;
+  font-family: "Gilroy";
+  background: #00b533;
+  transition: all 0.2s ease;
+  &:hover {
+    color: #fff !important;
+    background: #03962c !important;
+  }
+}
+
+// MEDIA PART ----------------------
+@media screen and (max-width: 1366px) {
+  .serius {
+    width: 100%;
+    height: 100vh;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .container {
+    padding: 0 14px;
+  }
+}

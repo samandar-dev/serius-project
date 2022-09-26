@@ -1,0 +1,159 @@
+.home {
+  height: 80%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  &__inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__phone-box {
+    position: absolute;
+    bottom: 55px;
+    left: 15px;
+    display: none;
+  }
+  &__phone {
+    border: none;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease;
+
+    img {
+      object-fit: cover;
+    }
+    &:hover {
+      transform: scale(1.08);
+    }
+  }
+  &__desc-box {
+    padding-left: 120px;
+  }
+  &__title {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 58px;
+    font-family: "Gilroy";
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+    color: #00282f;
+    margin-bottom: 140px;
+    span {
+      display: inline-block;
+      margin-bottom: 30px;
+    }
+  }
+  &__img {
+    width: 100%;
+    object-fit: contain;
+  }
+  &__responimg {
+    width: 100%;
+    object-fit: contain;
+    display: none;
+  }
+  &__oval-img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    img {
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+}
+
+@media screen and (max-width: 1120px) {
+  .home {
+    &__desc-box {
+      padding-left: 70px;
+    }
+    &__title {
+      font-size: 40px;
+      line-height: 48px;
+      margin-bottom: 100px;
+      span {
+        margin-bottom: 15px;
+      }
+    }
+    &__img-box {
+      width: 40%;
+    }
+    &__oval-img {
+      img {
+        width: 250px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1000px) {
+  .home {
+    &__title {
+      margin-bottom: 80px;
+    }
+    &__oval-img {
+      img {
+        width: 200px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 860px) {
+  .home {
+    &__img {
+      display: none;
+    }
+    &__oval-img {
+      img {
+        width: 180px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 550px) {
+  .home {
+    &__inner {
+      flex-direction: column-reverse;
+    }
+    &__phone-box {
+      display: block;
+    }
+    &__desc-box {
+      padding-left: 0px;
+    }
+    &__img-box {
+      width: auto;
+    }
+    &__responimg {
+      position: relative;
+      display: block;
+      z-index: 2;
+    }
+    &__desc-box {
+      text-align: center;
+    }
+    &__title {
+      font-size: 28px;
+      line-height: 34px;
+      margin-bottom: 120px;
+      margin-top: -30px;
+    }
+    &__oval-img {
+      bottom: 10px;
+      right: -30px;
+      img {
+        width: 150px;
+      }
+    }
+  }
+}
